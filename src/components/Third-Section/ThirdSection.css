@@ -1,0 +1,106 @@
+.third-section {
+    background-color: var(--bg-L-gray-color);
+    padding: 100px 0;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-container .first-part {
+    margin-bottom: 1.5rem;
+}
+
+.section-container .first-part .third-title {
+    font-size: 2.5rem;
+    width: 50%;
+    padding-right: 20px;
+    font-weight: 400;
+    color: var(--text-title-color);
+    margin-bottom: 1.8rem;
+    margin-top: 1.5rem;
+}
+
+.section-container .last-part {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.section-container .last-part .article-box {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    width: calc(100% / 4);
+}
+
+.section-container .last-part .article-box .info-box {
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+
+.section-container .last-part .article-box img {
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 50%;
+    display: block;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.section-container .last-part .article-box h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-paraph-color);
+    margin-top: -2rem;
+}
+
+.section-container .last-part .article-box h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-title-color);
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.section-container .last-part .article-box h3:hover {
+    color: var(--lime-green-color);
+}
+
+.section-container .last-part .article-box p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align-last: left;
+    color: var(--text-paraph-color);
+}
+
+@media (max-width: 375px) {
+    .section-container .first-part .third-title {
+        font-size: 2.5rem;
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .section-container .last-part .article-box {
+        background-color: var(--white-color);
+        border-radius: 8px;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .section-container .last-part .article-box h3 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-container .last-part .article-box p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        text-align: left;
+        color: var(--text-paraph-color);
+        margin-bottom: 1.5rem;
+    }
+}

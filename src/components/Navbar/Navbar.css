@@ -1,0 +1,139 @@
+.nav-bar {
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+    z-index: 100;
+}
+
+.nav-section {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 16%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.list li {
+    padding: 2rem 1rem;
+    font-weight: 700;
+    font-size: 1.1em;
+    color: var(--text-paraph-color);
+    cursor: pointer;
+    transition: .7s;
+    position: relative;
+}
+
+.list li:hover {
+    color: var(--text-title-color);
+    transition: .7s;
+}
+
+.list li:hover::after {
+    content: "";
+    width: 60%;
+    height: 6px;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-48%);
+    border-radius: 4px;
+    background-image:
+        linear-gradient(to right,
+            var(--lime-green-color),
+            var(--lime-blue-color));
+    transition: .7s;
+}
+
+.overlay {
+    display: none;
+}
+
+@media (max-width: 375px) {
+    .nav-section {
+        position: relative;
+    }
+
+    .list.active {
+        position: absolute;
+        display: block;
+        width: 95%;
+        height: 50vh;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        flex-direction: column;
+        background-color: var(--white-color);
+        z-index: 2000;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        border-radius: 8px;
+        text-align: center;
+    }
+    .list {
+        display: none;
+    }
+
+    .list li:hover::after {
+        top: 87%;
+        width: 90%;
+    }
+
+    /* .overlay {
+        display: block;
+        position: relative;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: #000;
+        z-index: 2500;
+    } */
+
+    .overlay::after {
+        content: "";
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #000;
+        z-index: 2000;
+    } 
+
+    .logo {
+        width: 50%;
+    }
+
+    .nav-bar :nth-child(5) {
+        display: none;
+    }
+
+    .icons {
+        width: 60px;
+        margin-bottom: 15px;
+        margin-right: -45%;
+    }
+}
+
+@media (min-width: 376px) {
+    .icons {
+        display: none;
+    }
+
+}

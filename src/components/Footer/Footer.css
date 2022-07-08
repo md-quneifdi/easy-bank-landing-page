@@ -1,0 +1,166 @@
+.footer {
+    background-color: var(--text-title-color);
+    padding: 100px 0;
+}
+
+.footer-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-section .logo-part {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-section .logo-part .logo-box {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.footer-section .logo-part .logo-box .logo {
+    width: 50%;
+    margin-bottom: 4.1rem;
+    text-align: center;
+}
+
+.footer-section .logo-part .logo-box .logo img {
+    width: 100%;
+    filter: saturate(400%) contrast(65%) brightness(380%);
+}
+
+.footer-section .logo-part .logo-box .social-list {
+    width: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.footer-section .logo-part .logo-box .social-list li {
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.footer-section .logo-part .logo-box .social-list li:hover svg path {
+    fill: var(--lime-green-color);
+}
+
+.footer-section .logo-part .links-list {
+    display: flex;
+    justify-content: start;
+    color: var(--text-paraph-color);
+    padding: 1rem;
+    line-height: 3;
+    font-weight: 700;
+    width: 50%;
+}
+
+.footer-section .logo-part .links-list .first-list {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 2);
+    margin-right: 2rem;
+}
+
+.footer-section .logo-part .links-list .first-list {
+    cursor: pointer;
+}
+
+.footer-section .logo-part .links-list .first-list span:hover {
+    color: var(--lime-green-color);
+    opacity: 0.7;
+}
+
+.footer-section .logo-part .links-list .last-list {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 2);
+}
+
+.footer-section .logo-part .links-list .last-list span {
+    cursor: pointer;
+    width: 100%;
+}
+
+.footer-section .logo-part .links-list .last-list span:last-child {
+    word-break: keep-all;
+}
+
+.footer-section .logo-part .links-list .last-list span:hover {
+    color: var(--lime-green-color);
+    opacity: 0.7;
+}
+
+.footer-section .btn-part {
+    color: var(--text-paraph-color);
+    font-size: 18px;
+    text-align: center;
+}
+
+.footer-section .btn-part :nth-child(1) {
+    margin-bottom: 1.8rem;
+    transition: 0.5s;
+}
+
+.footer-section .btn-part :nth-child(1):hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 375px) {
+
+    .footer {
+        padding: 50px 0;
+    }
+    
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-section .logo-part {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer-section .logo-part .logo-box .logo {
+        width: 10rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .footer-section .logo-part .links-list {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: var(--text-paraph-color);
+        padding: 1rem;
+        line-height: 3;
+        font-weight: 700;
+        width: 100%;
+    }
+
+    .footer-section .logo-part .links-list .first-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .footer-section .logo-part .links-list .last-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-right: 0;
+    }
+}
